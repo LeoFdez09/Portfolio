@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 500;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #000;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 999;
+}
+
+#progress-bar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+#progress-bar::before {
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progress-bar::after {
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+@keyframes animate {
+    0%,100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+:root {
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 200px;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+}
+
+.nav .nav-title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.nav .nav-title:hover {
+    transform: scale(1.1);
+}
+
+.nav .nav-title span {
+    color: #ff0055;
+    font-weight: 700;
+}
+
+.ul {
+    display: flex;
+}
+
+.ul .li {
+    font-size: 25px;
+    transition: transform .3s ease;
+}
+
+.ul .s {
+    margin-left: 100px;
+}
+
+.ul .li .a {
+    color: #fff;
+    transition: color .3s ease;
+}
+
+.ul .li:hover {
+    transform: scale(1.1);
+    
+}
+
+.ul .li .a:hover {
+    color: #ff0055;
+}
+
+.header {
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 150px;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+
+}
+
+.header-content .text-section {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 2em;
+    color: #fff;
+}
+
+.ui-title {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.leo-title {
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+.leo-title span {
+    color: #ff0055;
+    font-weight: 700;
+}
+
+
+.leo-title2 {
+    font-size: 3.5em;
+    font-weight: 700;
+}
