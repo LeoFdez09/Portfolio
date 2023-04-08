@@ -87,6 +87,7 @@ body {
     color: #fff;
     align-items: center;
     width: 100%;
+    z-index: 100;
 }
 
 .nav .nav-title {
@@ -137,6 +138,17 @@ body {
     height: 100vh;
     overflow: hidden;
     padding-top: 150px;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, #1d1d1d, transparent);
 }
 
 .header-content {
@@ -176,4 +188,107 @@ body {
 .leo-title2 {
     font-size: 3.5em;
     font-weight: 700;
+}
+
+
+/* --------------------------------- */
+
+.about-section {
+    background: #1d1d1d;
+    color: #fff;
+    padding: 50px 50px;
+}
+
+.about-section-h2 {
+    font-size: 4em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ff0055;
+}
+
+.about-section-text {
+    font-size: 25px;
+}
+
+
+/* --------------------------------- */
+
+.services {
+    background: #1d1d1d;
+    width: 100%;
+    padding: 50px 50px;
+}
+
+.services-section-h2 {
+    font-size: 4em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ff0055;
+}
+
+.bars-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.bars {
+    position: relative;
+    left: -20px;
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    background: #333333;
+    display: grid;
+    padding: 30px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+}
+
+.bar p {
+    margin-left: 40px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.bar-black {
+    background: #000;
+    width: 70%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.bar-white {
+    background: #fff;
+    width: 0%;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.html {
+    background: rgb(199, 129, 0);
+    width: 100%;
+}
+
+.kotlin {
+    width: 80%;
+    background: linear-gradient(to right, rgb(0, 110, 255), rgb(127, 0, 153));
+}
+
+.css {
+    background: rgb(33, 74, 255);
+    width: 90%;
+}
+
+.javascript {
+    width: 70%;
+    background: rgb(255, 251, 0);
 }
